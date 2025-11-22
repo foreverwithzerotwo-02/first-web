@@ -1,0 +1,30 @@
+// 表格按钮样式
+.func-table-little-btn {
+    color: var(--text-color-primary);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: all var(--transition-duration-default);
+    background-color: transparent;
+
+    &:hover {
+        color: var(--text-color-primary-light);
+    }
+
+    &:active {
+        color: var(--text-color-primary);
+    }
+
+    // 紅色
+    &--warn {
+        color: var(--warn-color-100);
+
+        &:hover {
+            color: var(--warn-color-200);
+        }
+
+        &:active {
+            color: var(--warn-color-100);
+        }
+    }
+}

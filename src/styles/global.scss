@@ -1,0 +1,291 @@
+@forward 'element-plus/theme-chalk/src/common/var.scss' with ($colors: ('primary': ('base': green,
+        ),
+    )); // 全局样式
+
+:root {
+    // 主题背景色
+    --background-color-white: white;
+    // 主题背景色 半透明
+    --background-color-white-transparent: rgba(255, 255, 255, 0.5);
+    // 相反背景色
+    --background-color-white-opposite: rgb(10, 10, 10);
+    // 主题文字色
+    --color-white: black;
+
+    // 头部高度
+    --header-height: 60px;
+
+    // 主题色，绿色
+    --primary-color-100: #bde4ab;
+    --primary-color-200: #d2f3c0;
+    --primary-color-300: #dbf4cd;
+    --primary-color-400: #ECFAE5;
+    --primary-color-500: #f1f8ed;
+    --primary-color-600: #f8fcf6;
+
+    // 警告色
+    --warn-color-100: rgb(255, 0, 0);
+    --warn-color-200: rgb(217, 4, 4);
+
+    // 文字颜色
+    --text-color-primary-deep: #51aa29;
+    --text-color-primary: #9cc48a;
+    --text-color-primary-light: #b0dc9c;
+    --text-color-primary-light-more: #b0e896;
+    // 灰色文字颜色
+    --text-color-gray-light: #929292;
+    --text-color-gray-default: #666;
+    --text-color-gray-dark: #333;
+    // 白色文字颜色
+    --text-color-white-light: #ffffff;
+    --text-color-white-default: #eeeeee;
+    --text-color-white-dark: #d3d3d3;
+    // 禁用文字灰色
+    --text-color-disable-gray-dark: #6f6f6f;
+
+    // 灰色边框
+    --border-color-gray-default: #e0dede;
+    --border-color-gray-dark: #c7c7c7;
+    --border-color-gray-deeper: #b0b0b0;
+    // 深灰色边框组合
+    --border-color-gray-deepest: #696969;
+    --border-color-gray-deep: #9e9e9e;
+
+    // 灰色背景
+    --background-color-gray-light-more: #f0f0f0;
+    --background-color-gray-light: #e8e8e8;
+    --background-color-gray-default: #dbdbdb;
+    --background-color-gray-dark: #c7c7c7;
+    // 黑色背景
+    --background-color-black-default: #6a6a6a;
+    // 较黑背景
+    --background-color-black-deep: #2f2f2f;
+    // 最黑背景
+    --background-color-black-deepest: #1a1a1a;
+    // 较黑带透明色背景
+    --background-color-black-transparent-light: rgba(104, 104, 104, 0.5);
+    --background-color-black-transparent-pale: rgba(104, 104, 104, 0.2);
+    --background-color-black-transparent: rgba(63, 63, 63, 0.5);
+    --background-color-black-transparent-deep: rgba(63, 63, 63, 0.8);
+    --background-color-black-transparent-dark: rgba(28, 28, 28, 0.5);
+    --background-color-black-transparent-dark-deeper: rgba(58, 58, 58, 0.5);
+    // 灰色透明背景-遮罩用
+    --background-color-gray-transparent-light: rgba(183, 182, 182, 0.5);
+    --background-color-gray-transparent: rgba(154, 154, 154, 0.5);
+    --background-color-gray-transparent-dark: rgba(118, 118, 118, 0.5);
+    // 禁用透明背景
+    --background-color-disable-gray-transparent: rgba(142, 141, 141, 0.23);
+
+    // 全局过渡时间
+    --transition-duration-default: 0.3s;
+    --transition-duration-fast: 0.15s;
+    --transition-duration-slow: 0.5s;
+
+}
+
+// 暗色主题
+.dark-theme {
+
+    html,
+    body {
+        background-color: var(--background-color-white);
+        /* 背景黑色 */
+        color: var(--color-white);
+        /* 文字白色 */
+    }
+
+    /* 主题背景色 */
+    --background-color-white: rgb(36, 36, 36);
+    /* 主题背景色 半透明 */
+    --background-color-white-transparent: rgba(15, 15, 15, 0.5);
+    /* 相反背景色（暗色中相反即亮背景） */
+    --background-color-white-opposite: rgb(245, 245, 245);
+    /* 主题文字色（暗色中白色文字） */
+    --color-white: white;
+
+    /* 灰色文字颜色（亮灰 → 暗灰反转） */
+    --text-color-gray-light: #cfcfcf;
+    --text-color-gray-default: #aaaaaa;
+    --text-color-gray-dark: #888888;
+    /* 白色文字颜色（在暗色中仍保持亮度分层） */
+    --text-color-white-light: #ffffff;
+    --text-color-white-default: #eeeeee;
+    --text-color-white-dark: #cccccc;
+    /* 禁用文字灰色 */
+    --text-color-disable-gray-dark: #8a8a8a;
+
+    /* 灰色边框（亮色边框 → 暗色柔和边框） */
+    --border-color-gray-default: #2b2b2b;
+    --border-color-gray-dark: #3c3c3c;
+    --border-color-gray-deeper: #4b4b4b;
+    /* 深灰色边框组合 */
+    --border-color-gray-deepest: #8a8a8a;
+    --border-color-gray-deep: #6d6d6d;
+
+    /* 灰色背景（亮灰反转为暗灰层次） */
+    --background-color-gray-light-more: #1e1e1e;
+    --background-color-gray-light: #252525;
+    --background-color-gray-default: #303030;
+    --background-color-gray-dark: #3f3f3f;
+
+    /* 黑色背景（暗色中反为亮灰层次） */
+    --background-color-black-default: #b0b0b0;
+    /* 较黑背景（反为较浅灰） */
+    --background-color-black-deep: #d0d0d0;
+    /* 最黑背景（反为接近白） */
+    --background-color-black-deepest: #f0f0f0;
+
+    /* 较黑带透明色背景（保持透明层次但调亮） */
+    --background-color-black-transparent-light: rgba(160, 160, 160, 0.5);
+    --background-color-black-transparent-pale: rgba(180, 180, 180, 0.2);
+    --background-color-black-transparent: rgba(200, 200, 200, 0.5);
+    --background-color-black-transparent-deep: rgba(220, 220, 220, 0.8);
+    --background-color-black-transparent-dark: rgba(240, 240, 240, 0.5);
+    --background-color-black-transparent-dark-deeper: rgba(210, 210, 210, 0.5);
+
+    /* 灰色透明背景-遮罩用（稍微调亮） */
+    --background-color-gray-transparent-light: rgba(70, 70, 70, 0.5);
+    --background-color-gray-transparent: rgba(50, 50, 50, 0.5);
+    --background-color-gray-transparent-dark: rgba(30, 30, 30, 0.5);
+
+    /* 禁用透明背景 */
+    --background-color-disable-gray-transparent: rgba(40, 40, 40, 0.23);
+}
+
+html {
+    // 平滑滚动
+    scroll-behavior: smooth;
+}
+
+/* =============================
+   Element Plus 全局覆盖样式
+   ============================= */
+
+/* ---- Carousel（走马灯）指示器样式 ---- */
+.el-carousel {
+    /* hover/选中时的颜色 */
+
+    .el-carousel__container {
+        height: 100% !important;
+    }
+
+    /* 指示器未激活时的颜色 */
+    .el-carousel__button {
+        background-color: #bbb !important;
+    }
+
+    /* 指示器激活时的颜色 */
+    .el-carousel__indicator.is-active .el-carousel__button {
+        background-color: #ff4d4f !important;
+    }
+
+    /* 左右切换按钮（箭头）背景色 */
+    .el-carousel__arrow {
+        background-color: rgba(0, 0, 0, 0.4) !important;
+        /* 默认半透明黑 */
+        color: #fff !important;
+        /* 箭头图标颜色 */
+    }
+
+    /* 左右切换按钮 hover 时的样式 */
+    .el-carousel__arrow:hover {
+        background-color: rgba(255, 77, 79, 0.8) !important;
+        /* hover 变红 */
+        color: #fff !important;
+    }
+}
+
+// 分页器
+.el-pagination {
+    li {
+        &:hover {
+            color: var(--text-color-primary-deep) !important;
+        }
+    }
+
+    .is-active {
+        background-color: var(--primary-color-100) !important;
+
+        &:hover {
+            color: var(--background-color-white) !important;
+        }
+    }
+
+
+    & button:hover {
+        color: var(--text-color-primary-deep);
+    }
+}
+
+// ====================================================================
+// ====================================================================
+
+// 容器
+.container {
+    width: 90%;
+    /* 页面宽度占屏幕的90% */
+    max-width: 1300px;
+    /* 最大宽度限制 */
+    margin: 0 auto;
+    /* 居中 */
+    box-sizing: border-box;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+// 去除密码输入框的眼睛功能
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+    /* Edge */
+}
+
+input[type="password"] {
+    -webkit-text-security: disc;
+    /* iOS Safari */
+}
+
+// 全局入场离场动画
+.fade-sliden-down-enter-active {
+    animation: fade-sliden-down-enter var(--transition-duration-slow);
+
+    @keyframes fade-sliden-down-enter {
+        0% {
+            opacity: 0;
+            transform: translateY(70%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(100%);
+        }
+    }
+}
+
+.fade-sliden-down-leave-active {
+    animation: fade-sliden-down-leave var(--transition-duration-slow);
+
+    @keyframes fade-sliden-down-leave {
+        0% {
+            opacity: 1;
+            transform: translateY(100%);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateY(70%);
+        }
+    }
+}
